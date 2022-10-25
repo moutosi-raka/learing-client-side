@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineBookOpen } from "react-icons/hi";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const LeftSideNav = () => {
     
@@ -16,6 +17,11 @@ const LeftSideNav = () => {
 
     return (
         <div className='p-8'>
+            <div>
+            <button className="btn btn-outline btn-info block mb-3 w-2/3"><FaGoogle className="inline mb-1 mr-2"></FaGoogle> Login With Google</button>
+            <button className="btn btn-outline btn-info mb-5 w-2/3">
+              <FaGithub  className="inline mr-2"></FaGithub>  Login With Github</button>
+            </div>
             <div className='mb-2 pb-2' style={{borderBottom: '2px solid white', width: '50%'}}>
             <h1 className='text-2xl font-extrabold'>Courses List</h1>
             </div>
