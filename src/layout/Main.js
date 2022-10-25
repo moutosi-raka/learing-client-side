@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <div>
       <Header></Header>
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 bg-slate-800 text-white px-8">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 bg-slate-800 text-white pl-8">
         <div>
           <LeftSideNav></LeftSideNav>
         </div>
