@@ -26,7 +26,7 @@ const LeftSideNav = () => {
             <h1 className='text-2xl font-extrabold'>Courses List</h1>
             </div>
             {
-                courses.map(course => <p key={course.id} className='py-1 hover:text-slate-500'><HiOutlineBookOpen className='inline mr-3'></HiOutlineBookOpen><Link key={course.id}>{course.name}</Link></p>)
+                courses.map(course => <p key={course.id} className='py-1 hover:text-slate-500'><HiOutlineBookOpen className='inline mr-3'></HiOutlineBookOpen><Link to={`/course-details/${course.id}`} key={course.id}>{course.name}</Link></p>)
             }
         </div>
     );

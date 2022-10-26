@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const CourseCart = ({ course }) => {
   const { title, amount, image_url} = course;
@@ -13,8 +14,8 @@ const CourseCart = ({ course }) => {
           <hr/>
           <div className="card-actions justify-between">
           <h2 className=" card-title text-black">${amount}</h2>
-          <button className="btn btn-outline btn-info w-1/2">
-            See Details
+          <button className="btn btn-outline w-1/2"> 
+            See Details <FaArrowRight className="ml-3"></FaArrowRight>
           </button>
           </div>
         </div>
