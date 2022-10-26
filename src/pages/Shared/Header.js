@@ -3,10 +3,16 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import logo from  "../../images/2-2-education-picture.png"
-import { FaUserAlt } from "react-icons/fa";
+
 
 const Header = () => {
-  const {user} = useContext(AuthContext)
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogout = ()=>{
+    logOut()
+    .then( ()=>{})
+    .catch(e => console.error(e))
+  }
   return (
     <div className="px-4">
       <div className="navbar bg-base-100">
@@ -72,7 +78,7 @@ const Header = () => {
             user?.uid ?
             <>
             <img title={user?.displayName} className="h-14 rounded-full mr-5" src={user?.photoURL} alt=""/>
-            <Link  className="btn mr-5">LogOut</Link>
+            <Link onClick={handleLogout}  className="btn mr-5">LogOut</Link>
             </>
             
             :
