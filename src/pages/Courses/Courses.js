@@ -1,9 +1,18 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import CourseCart from './CourseCart/CourseCart';
 
 const Courses = () => {
+    const allCourses = useLoaderData();
+    console.log(allCourses);
     return (
-        <div>
-            <h1>this is courses</h1>
+        <div className='grid lg:grid-cols-2 grid-cols-1 gap-4 py-8 gap-y-14'>
+            {
+                allCourses.map(course => <CourseCart
+                key={course._id}
+                course={course}
+                ></CourseCart>)
+            }
         </div>
     );
 };

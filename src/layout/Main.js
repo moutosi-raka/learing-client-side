@@ -8,11 +8,11 @@ const Main = () => {
   return (
     <div>
       <Header></Header>
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 bg-slate-800 text-white pl-8">
-        <div>
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 bg-slate-800 text-white pl-8">
+        <div style={{borderRight: '1px solid white'}}>
           <LeftSideNav></LeftSideNav>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-3 px-8">
           <Outlet></Outlet>
         </div>
       </div>

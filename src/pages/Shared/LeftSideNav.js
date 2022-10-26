@@ -18,15 +18,15 @@ const LeftSideNav = () => {
     return (
         <div className='p-8'>
             <div>
-            <button className="btn btn-outline btn-info block mb-3 w-2/3"><FaGoogle className="inline mb-1 mr-2"></FaGoogle> Login With Google</button>
-            <button className="btn btn-outline btn-info mb-5 w-2/3">
+            <button className="btn btn-outline btn-info block mb-3 lg:w-full w-1/2"><FaGoogle className="inline mb-1 mr-2"></FaGoogle> Login With Google</button>
+            <button className="btn btn-outline btn-info mb-5 lg:w-full w-1/2">
               <FaGithub  className="inline mr-2"></FaGithub>  Login With Github</button>
             </div>
-            <div className='mb-2 pb-2' style={{borderBottom: '2px solid white', width: '50%'}}>
+            <div className='mb-2 pb-2 ' style={{borderBottom: '2px solid white', width: '50%'}}>
             <h1 className='text-2xl font-extrabold'>Courses List</h1>
             </div>
             {
-                courses.map(course => <p className='py-1 hover:text-slate-500'><HiOutlineBookOpen className='inline mr-3'></HiOutlineBookOpen><Link key={course.id}>{course.name}</Link></p>)
+                courses.map(course => <p key={course.id} className='py-1 hover:text-slate-500'><HiOutlineBookOpen className='inline mr-3'></HiOutlineBookOpen><Link key={course.id}>{course.name}</Link></p>)
             }
         </div>
     );
