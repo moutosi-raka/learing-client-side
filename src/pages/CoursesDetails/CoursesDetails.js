@@ -7,7 +7,7 @@ const CoursesDetails = () => {
     useLoaderData();
 
   return (
-    <div>
+    <div className="pb-8">
       <h1 className="text-center text-3xl pt-8">Welcome, {title} Course</h1>
       <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-12">
         <div>
