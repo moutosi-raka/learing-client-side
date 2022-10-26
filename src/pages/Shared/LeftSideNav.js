@@ -4,10 +4,15 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineBookOpen } from "react-icons/hi";
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import { useContext } from 'react';
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const LeftSideNav = () => {
     
     const [courses, setCourses] = useState([]);
+    const {googleSignIn} = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
 
     useEffect( ()=>{
         fetch('http://localhost:5000/courses-categories')
@@ -15,10 +20,19 @@ const LeftSideNav = () => {
         .then(data => setCourses(data))
     },[])
 
+    const handleGoogleSignIn = ()=>{
+        googleSignIn(googleProvider)
+        .then(res => {
+            const user = res.user;
+            console.log(user);
+        })
+        .catch(e => console.error('error :', e))
+    }
+
     return (
         <div className='p-8'>
             <div>
-            <button className="btn btn-outline btn-info block mb-3 lg:w-full w-1/2"><FaGoogle className="inline mb-1 mr-2"></FaGoogle> Login With Google</button>
+            <button onClick={handleGoogleSignIn} className="btn btn-outline btn-info block mb-3 lg:w-full w-1/2"><FaGoogle className="inline mb-1 mr-2"></FaGoogle> Login With Google</button>
             <button className="btn btn-outline btn-info mb-5 lg:w-full w-1/2">
               <FaGithub  className="inline mr-2"></FaGithub>  Login With Github</button>
             </div>
