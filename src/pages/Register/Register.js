@@ -19,9 +19,9 @@ const Register = () => {
     .then(result =>{
       const user = result.user;
       console.log(user)
+      form.reset();
     })
     .catch(e => console.error('error ', e))
-    form.reset();
 }
 
 
@@ -80,11 +80,6 @@ const Register = () => {
                     className="input input-bordered text-black"
                     required
                   />
-                  <label className="label">
-                    <Link href="#" className="label-text-alt link link-hover">
-                      Forgot password?
-                    </Link>
-                  </label>
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-wide w-full">Register</button>
