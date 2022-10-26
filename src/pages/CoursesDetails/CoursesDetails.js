@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 
 const CoursesDetails = () => {
@@ -32,7 +32,29 @@ const CoursesDetails = () => {
           }
           </div>
         </div>
-        <div>09</div>
+        <div className="pl-5">
+        <div className="card card-compact w-96 bg-base-100 shadow-xl ">
+        <figure>
+          <img src={image_url}alt="Shoes" />
+        </figure>
+        <div className="card-body">
+         <div className="card-actions justify-between">
+         <h2 className="card-title text-black">{title}</h2>
+          <h2 className=" card-title text-right text-black">${amount}</h2>
+         </div>
+          <hr/>
+          <div >
+          <Link >
+          <button className="btn btn-wide w-full">Purchase</button>
+          </Link>
+          </div>
+          <div className="flex justify-between">
+          <h2 className="text-base text-black">Total Video: {info.video}</h2>
+        <h2 className="text-base text-black">Total Quiz: {info.exam}</h2>
+          </div>
+        </div>
+      </div>
+        </div>
       </div>
     </div>
   );
