@@ -7,9 +7,9 @@ const Register = () => {
         <div className="hero min-h-screen bg-slate-800">
           <div className="hero-content flex-col">
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl font-bold ">Please Register Now</h1>
+              <h1 className="text-5xl font-bold my-4">Please Register Now</h1>
             </div>
-            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mb-8">
               <form>
               <div className="card-body">
                 <div className="form-control">
