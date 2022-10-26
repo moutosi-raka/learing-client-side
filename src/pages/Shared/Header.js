@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 import logo from  "../../images/2-2-education-picture.png"
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
   const {user} = useContext(AuthContext)
@@ -67,10 +68,19 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <p>{user.displayName}</p>
-          <Link  className="btn mr-5">LogOut</Link>
-          <Link to='/login' className="btn mr-5">Login</Link>
+          {
+            user?.uid ?
+            <>
+            <img title={user?.displayName} className="h-14 rounded-full mr-5" src={user?.photoURL} alt=""/>
+            <Link  className="btn mr-5">LogOut</Link>
+            </>
+            
+            :
+            <>
+             <Link to='/login' className="btn mr-5">Login</Link>
           <Link to='/register' className="btn">Register</Link>
+            </>
+          }
         </div>
       </div>
     </div>
