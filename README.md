@@ -1,6 +1,24 @@
-#Project Name
-***
+# Project Name 
 Learning
+***
+Learning is a online educational platform. You can purchase courses.
+
+# Project Live Side Link : 
+
+
+## Technologies
+
+* react: ^18.2.0
+* react-dom: ^18.2.0"
+* react-icons: ^4.6.0
+* react-iframe: ^1.8.5
+* react-router-dom: ^6.4.2
+* react-slick: ^0.29.0
+* react-to-pdf: ^0.0.14
+* tailwindcss: ^3.2.1
+* postcss: ^8.4.18
+* firebase: ^9.12.1
+* daisyui: ^2.31.0
 
 
 
