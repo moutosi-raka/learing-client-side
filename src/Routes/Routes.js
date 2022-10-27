@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/check/:id',
-                element: <CheckOut></CheckOut>,
+                element: <PrivateRoute><CheckOut></CheckOut></PrivateRoute>,
                 loader: ({params})=> fetch(`https://learning-server-dun.vercel.app/courses-details/${params.id}`)
             },
             {
