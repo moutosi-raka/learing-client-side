@@ -4,23 +4,25 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Register = () => {
 
-  const {createUser} = useContext(AuthContext);
+  const {createUser, updateUserProfile} = useContext(AuthContext);
   const [error, setError] = useState('');
 
    const handleSubmit = event =>{
     event.preventDefault();
+
     const form = event.target;
     const name = form.name.value;
     const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name,photoURL,email, password)
+
     createUser(email,password)
     .then(result =>{
       const user = result.user;
       console.log(user);
       setError('');
       form.reset();
+      handleUpdateUserProfile(name,photoURL);
     })
     .catch(e => {
       console.error('error', e)
@@ -28,6 +30,16 @@ const Register = () => {
     })
 }
 
+
+const handleUpdateUserProfile = (name,photoURL)=>{
+    const profile = {
+      displayName : name,
+      photoURL: photoURL
+    }
+     updateUserProfile(profile)
+     .then( ()=>{console.log('update')})
+     .catch( e => console.error(e))
+}
 
     return (
         <div>
