@@ -31,7 +31,7 @@ const CheckOut = () => {
           ))}
         </div>
         <div>
-          <div className="card card-compact w-1/2 mx-auto mt-16 bg-slate-800 shadow-xl">
+          <div className="card card-compact w-1/2 mx-auto mt-16 bg-slate-50 shadow-xl">
             <figure>
               <div className="avatar mt-4">
                 <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">

@@ -1,6 +1,32 @@
 .App {
   text-align: center;
 }
+#light .left-nav{
+  border-bottom: 2px solid black;
+}
+#dark .left-nav{
+  border-bottom: 2px solid white;
+}
+#dark .left-nav-border{
+  border-right: 2px solid white;
+}
+#light .left-nav-border{
+  border-right: 2px solid black;
+}
+
+#light{
+  background-color: rgb(240, 233, 233);
+  color: black;
+}
+
+#dark{
+  background-color: #1a1b1c;
+  color: white;
+}
+
+#light .header{
+  color: white;
+}
 
 .App-logo {
   height: 40vmin;

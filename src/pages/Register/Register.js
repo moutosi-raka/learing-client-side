@@ -43,7 +43,7 @@ const handleUpdateUserProfile = (name,photoURL)=>{
 
     return (
         <div>
-        <div className="hero min-h-screen bg-slate-800">
+        <div className="hero min-h-screen">
           <div className="hero-content flex-col">
             <div className="text-center lg:text-left">
               <h1 className="text-5xl font-bold my-4">Please Register Now</h1>

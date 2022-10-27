@@ -8,8 +8,8 @@ const Main = () => {
   return (
     <div>
       <Header></Header>
-      <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 bg-slate-800 text-white pl-8">
-        <div style={{borderRight: '1px solid white'}}>
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 pl-8">
+        <div className="left-nav-border">
           <LeftSideNav></LeftSideNav>
         </div>
         <div className="col-span-3 px-8">

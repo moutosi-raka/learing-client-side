@@ -36,7 +36,7 @@ const LeftSideNav = () => {
             <button className="btn btn-outline btn-info mb-5 lg:w-full w-1/2">
               <FaGithub  className="inline mr-2"></FaGithub>  Login With Github</button>
             </div>
-            <div className='mb-2 pb-2 ' style={{borderBottom: '2px solid white', width: '50%'}}>
+            <div className='mb-2 pb-2 left-nav' style={{ width: '50%'}}>
             <h1 className='text-2xl font-extrabold'>Courses List</h1>
             </div>
             {
