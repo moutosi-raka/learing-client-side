@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
@@ -6,6 +7,7 @@ import { AuthContext } from "../../Context/AuthProvider/AuthProvider";
 const Login = () => {
 
   const {signIn} = useContext(AuthContext);
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
@@ -20,9 +22,13 @@ const Login = () => {
       const user = result.user;
       console.log(user);
       form.reset();
+      setError('');
       navigate('/')
     })
-    .catch(e => console.error('error', e))
+    .catch(e => {
+      console.error('error', e)
+      setError(e.message);
+    })
   }
 
 
@@ -66,11 +72,13 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-wide w-full">Login</button>
+                <button className="btn  w-full">Login</button>
               </div>
               <div className="text-black text-center">
                 <p>Don't have an account ?</p>
                 <Link to='/register'><button className="btn btn-link">Register Now</button></Link>
+
+                <p className="text-red-700">{error}</p>
               </div>
             </div>
             </form>
