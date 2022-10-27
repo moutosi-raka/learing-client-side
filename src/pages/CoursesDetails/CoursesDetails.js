@@ -15,7 +15,7 @@ const CoursesDetails = () => {
       <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-12">
         <div>
           <h2 className="text-2xl mb-5">Course Instructor</h2>
-          <div className="card  card-side bg-slate-900 shadow-xl h-24 ">
+          <div className="card  card-side bg-slate-700 shadow-xl h-24 text-white ">
             <figure>
               <img
                 className="h-20 rounded-full p-2 mx-5"

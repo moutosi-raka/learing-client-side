@@ -40,7 +40,7 @@ const CheckOut = () => {
               </div>
             </figure>
             <div className="card-body text-center">
-              <h2 className="text-xl">{user?.displayName}</h2>
+              <h2 className="text-xl text-black">{user?.displayName}</h2>
             </div>
           </div>
         </div>
