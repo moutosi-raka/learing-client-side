@@ -15,7 +15,7 @@ const LeftSideNav = () => {
     const googleProvider = new GoogleAuthProvider();
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/courses-categories')
+        fetch('https://learning-server-dun.vercel.app/courses-categories')
         .then(res => res.json())
         .then(data => setCourses(data))
     },[])
