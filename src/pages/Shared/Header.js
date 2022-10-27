@@ -44,7 +44,7 @@ const Header = () => {
                 <Link to="/courses">Courses</Link>
               </li>
               <li>
-                <Link>Blog</Link>
+                <Link to='/blog'>Blog</Link>
               </li>
             </ul>
           </div>
@@ -62,7 +62,7 @@ const Header = () => {
               <Link to="/courses">Courses</Link>
             </li>
             <li>
-              <Link>Blog</Link>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
               <label className="swap swap-rotate">
