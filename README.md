@@ -3,7 +3,7 @@
 ***
 Learning is a online educational platform. You can purchase courses.
 
-# Project Live Side Link : 
+# Project Live Side Link : (https://learning-a98c7.web.app/courses)
 
 
 ## Technologies
