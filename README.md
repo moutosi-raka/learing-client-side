@@ -1,5 +1,5 @@
-# Project Name 
-Learning
+# Project Name :Learning
+
 ***
 Learning is a online educational platform. You can purchase courses.
 
@@ -19,11 +19,20 @@ Learning is a online educational platform. You can purchase courses.
 * postcss: ^8.4.18
 * firebase: ^9.12.1
 * daisyui: ^2.31.0
+* express js
 
 
+# Feature 
 
-
-
+* Firebase authentication system 
+* Private router
+* Dynamically show login user image
+* Responsive Website
+* Download pdf
+* toggle navbar
+* API
+* use express js for backend API loading
+* Not Found Page
 
 
 # Getting Started with Create React App
