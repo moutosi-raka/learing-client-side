@@ -6,13 +6,15 @@ import { HiOutlineBookOpen } from "react-icons/hi";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider, GithubAuthProvider } from 'firebase/auth';
+
 
 const LeftSideNav = () => {
     
     const [courses, setCourses] = useState([]);
-    const {googleSignIn} = useContext(AuthContext);
+    const {googleSignIn, githubSignIn } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     useEffect( ()=>{
         fetch('https://learning-server-dun.vercel.app/courses-categories')
@@ -21,7 +23,15 @@ const LeftSideNav = () => {
     },[])
 
     const handleGoogleSignIn = ()=>{
-        googleSignIn(googleProvider)
+        googleSignIn(githubProvider)
+        .then(res => {
+            const user = res.user;
+            console.log(user);
+        })
+        .catch(e => console.error('error :', e))
+    }
+    const handleGithubSignIn = ()=>{
+        githubSignIn(googleProvider)
         .then(res => {
             const user = res.user;
             console.log(user);
@@ -33,7 +43,7 @@ const LeftSideNav = () => {
         <div className='p-8'>
             <div>
             <button onClick={handleGoogleSignIn} className="btn btn-outline btn-info block mb-3 lg:w-full w-1/2"><FaGoogle className="inline mb-1 mr-2"></FaGoogle> Login With Google</button>
-            <button className="btn btn-outline btn-info mb-5 lg:w-full w-1/2">
+            <button onClick={handleGithubSignIn} className="btn btn-outline btn-info mb-5 lg:w-full w-1/2">
               <FaGithub  className="inline mr-2"></FaGithub>  Login With Github</button>
             </div>
             <div className='mb-2 pb-2 left-nav' style={{ width: '50%'}}>
