@@ -3,7 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 
 const CoursesDetails = () => {
-  const {category_id, info, amount, title, instructor, image_url, details, video } =
+  const {category_id, info, amount, title, instructor, image_url, details } =
     useLoaderData();
 
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Register = () => {
@@ -82,7 +81,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-wide w-full">Register</button>
+                  <button className="btn w-full">Register</button>
                 </div>
               </div>
               </form>
